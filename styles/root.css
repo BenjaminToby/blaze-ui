@@ -1,0 +1,21 @@
+:root {
+    /* Colors */
+    --main-color: #000;
+    --sec-color: #000;
+    --accent-color: #000;
+
+    /* Styling */
+    --radius: 5px;
+    --button-text-color: white;
+    --button-cursor: pointer;
+
+    /* Fonts */
+    --font-family: "Inter", Helvetica, Arial, system-ui;
+    --dark-bg-color: #0b0b1a;
+    --dark-text-color: white;
+    --text-color: #131316;
+    --font-size: 14px;
+    --line-height: 1.2;
+    --font-weight: 400;
+    --bg-color: white;
+}

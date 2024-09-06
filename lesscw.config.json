@@ -1,0 +1,8 @@
+{
+    "srcDst": [
+        {
+            "src": "./styles/less",
+            "dst": "./styles/dist/less.css"
+        }
+    ]
+}
