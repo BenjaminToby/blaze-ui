@@ -2,13 +2,13 @@
 
 A react component library done right
 
-# Installation
+## Installation
 
 ```shell
 npm install https://github.com/BenjaminToby/blaze-ui.git#latest
 ```
 
-# Setup
+## Setup
 
 After installing the module follow these steps to setup your theme:
 
@@ -30,9 +30,9 @@ After installing the module follow these steps to setup your theme:
 
 -   That's it. You're set to go.
 
-# Usage
+## Usage
 
-## Customize theme
+### Customize theme
 
 To customize your theme simple customize the `blaze/theme/theme.css` file
 
@@ -44,7 +44,7 @@ To customize your theme simple customize the `blaze/theme/theme.css` file
 
 This will change the global radius for buttons and other UI components
 
-## Change Color
+### Change Color
 
 The color scheme is generated from a JSON file located at `blaze/theme/color.json`.
 
