@@ -18,6 +18,8 @@ After installing the module follow these steps to setup your theme:
     npx blaze --init
     ```
 
+    This will add a folder named `blaze` to your root directory
+
 -   Add the CSS files from the `blaze` Folder to your app:
 
     ```javascript
