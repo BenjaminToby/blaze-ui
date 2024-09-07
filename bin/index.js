@@ -9354,72 +9354,66 @@ function generateCSS({
   colors: colors2,
   css: css2
 }) {
+  let text = css2;
   Object.keys(colors2).forEach((key) => {
     const colorRule = `${prefix}-${key}: ${colors2[key]};`;
-    css2 += `\n    ${colorRule}`;
+    text += `\n    ${colorRule}`;
   });
+  return text;
 }
 function palleteGenerator() {
   try {
     const colorCSSPath = path3.resolve(process.cwd(), "./blaze/styles/color.css");
     const colorJSON = fs2.readFileSync(path3.resolve(process.cwd(), "./blaze/theme/color.json"), "utf8");
     const colorObj = JSON.parse(colorJSON);
-    const colorTitleIndex = process.argv.findIndex((v) => Boolean(v.match(/--base/)));
     if (!colorObj.main) {
       console.log("Please enter a valid base color");
       process.exit();
     }
     let palleteObj = {};
-    const baseColor = process.argv[colorTitleIndex + 1];
-    const primaryPalette = createPaletteFromColor("primary", baseColor);
+    const primaryPalette = createPaletteFromColor("primary", colorObj.main);
     palleteObj = { ...primaryPalette };
-    const secColorTitleIndex = process.argv.findIndex((v) => Boolean(v.match(/--sec/)));
-    if (secColorTitleIndex > 0 && process.argv[secColorTitleIndex + 1]) {
-      const secColor = process.argv[secColorTitleIndex + 1];
-      const secPalette = createPaletteFromColor("sec", secColor);
+    if (colorObj.sec) {
+      const secPalette = createPaletteFromColor("sec", colorObj.sec);
       palleteObj = { ...palleteObj, ...secPalette };
     } else {
       const secPalette = createPaletteFromColor("sec", "#1C8F5B");
       palleteObj = { ...palleteObj, ...secPalette };
     }
-    const accentColorTitleIndex = process.argv.findIndex((v) => Boolean(v.match(/--accent/)));
-    if (accentColorTitleIndex > 0 && Boolean(process.argv[accentColorTitleIndex + 1])) {
-      const accentColor = process.argv[accentColorTitleIndex + 1];
-      const accentPalette = createPaletteFromColor("accent", accentColor);
+    if (colorObj.accent) {
+      const accentPalette = createPaletteFromColor("accent", colorObj.accent);
       palleteObj = { ...palleteObj, ...accentPalette };
     } else {
       const accentPalette = createPaletteFromColor("accent", "#3a3fa8");
       palleteObj = { ...palleteObj, ...accentPalette };
     }
-    const grayColorTitleIndex = process.argv.findIndex((v) => Boolean(v.match(/--gr(a|e)y/)));
-    if (grayColorTitleIndex > 0 && Boolean(process.argv[grayColorTitleIndex + 1])) {
-      const grayColor = process.argv[grayColorTitleIndex + 1];
-      const grayPalette = createPaletteFromColor("gray", grayColor);
+    if (colorObj.gray) {
+      const grayPalette = createPaletteFromColor("gray", colorObj.gray);
       palleteObj = { ...palleteObj, ...grayPalette };
     } else {
       const grayPalette = createPaletteFromColor("gray", "#475569");
       palleteObj = { ...palleteObj, ...grayPalette };
     }
     let colorTxt = `:root {`;
-    generateCSS({
+    colorTxt = generateCSS({
       prefix: "--main-color",
       colors: palleteObj.primary,
       css: colorTxt
     });
     if (palleteObj.sec)
-      generateCSS({
+      colorTxt = generateCSS({
         prefix: "--sec-color",
         colors: palleteObj.sec,
         css: colorTxt
       });
     if (palleteObj.accent)
-      generateCSS({
+      colorTxt = generateCSS({
         prefix: "--accent-color",
         colors: palleteObj.accent,
         css: colorTxt
       });
     if (palleteObj.gray)
-      generateCSS({
+      colorTxt = generateCSS({
         prefix: "--gray-color",
         colors: palleteObj.gray,
         css: colorTxt
