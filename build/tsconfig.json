@@ -18,7 +18,7 @@
             "@/*": ["../*"]
         }
     },
-    "include": ["../next-env.d.ts", "../**/*.ts", "../**/*.tsx"],
-    "exclude": ["node_modules"],
+    "include": ["../components/**/*.ts", "../components/**/*.tsx"],
+    "exclude": ["../node_modules", "../types"],
     "files": ["../components/react/index.ts"]
 }

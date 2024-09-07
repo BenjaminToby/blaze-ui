@@ -4,4 +4,5 @@ import Row from "./row";
 import Heading from "./heading";
 import Section from "./section";
 import Container from "./container";
-export { Button, Stack, Row, Heading, Section, Container };
+import Divider from "./divider";
+export { Button, Stack, Row, Heading, Section, Container, Divider };
