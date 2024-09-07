@@ -1,24 +1,33 @@
 {
     "name": "blaze-ui",
     "version": "1.0.0",
-    "main": "dist/index.js",
+    "main": "dist/react/components/index.js",
+    "type": "module",
+    "bin": {
+        "blaze": "bin/index.js"
+    },
     "scripts": {
         "dev": "batchrun",
         "tailwind": "npx tailwindcss -i ./styles/root.css -o ./styles/tailwind.css --watch",
-        "build": "bun build components/index.ts"
+        "build": "./build/build.sh"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "description": "",
     "devDependencies": {
+        "@types/chroma-js": "^2.4.4",
         "@types/node": "^22.5.4",
+        "@types/prompt": "^1.1.8",
         "@types/react": "^18.3.5",
         "@types/react-dom": "^18.3.0",
         "next": "^14.2.8",
         "typescript": "^5.5.4"
     },
     "dependencies": {
+        "kanastra-palette": "^0.0.3",
+        "prompt": "^1.3.0",
+        "prompts": "^2.4.2",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     }

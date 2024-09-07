@@ -1,1 +1,6 @@
-["npx next dev -p 3700", "lessc-watcher"]
+[
+    "npx next dev -p 3700",
+    "lessc-watcher",
+    "bun build ./bin/index.ts --outdir ./bin --watch --target node",
+    "bun build ./components/react/index.ts --outdir ./dist/react/components --watch --splitting --minify"
+]
