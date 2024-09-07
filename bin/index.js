@@ -9432,6 +9432,7 @@ function palleteGenerator() {
       console.log("Please run this function from your root directory");
     }
   } catch (error) {
+    console.log(error);
   }
 }
 
