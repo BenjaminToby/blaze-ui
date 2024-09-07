@@ -9362,7 +9362,7 @@ function generateCSS({
 function palleteGenerator() {
   try {
     const colorCSSPath = path3.resolve(process.cwd(), "./blaze/styles/color.css");
-    const colorJSON = path3.resolve(process.cwd(), "./blaze/theme/color.json");
+    const colorJSON = fs2.readFileSync(path3.resolve(process.cwd(), "./blaze/theme/color.json"), "utf8");
     const colorObj = JSON.parse(colorJSON);
     const colorTitleIndex = process.argv.findIndex((v) => Boolean(v.match(/--base/)));
     if (!colorObj.main) {
