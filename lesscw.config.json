@@ -2,7 +2,7 @@
     "srcDst": [
         {
             "src": "./blaze/styles/less",
-            "dst": "./blaze/styles/less.css"
+            "dst": "./blaze/styles/blaze.css"
         }
     ]
 }
