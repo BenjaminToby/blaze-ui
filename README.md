@@ -34,7 +34,7 @@ After installing the module follow these steps to setup your theme:
 
 ### Customize theme
 
-To customize your theme simple customize the `blaze/theme/theme.css` file
+To customize your theme simply customize the `blaze/theme/theme.css` file
 
 ```css
 :root {
