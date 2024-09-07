@@ -6777,7 +6777,6 @@ var import_prompt = __toESM(require_prompt(), 1);
 var safe = __toESM(require_safe2(), 1);
 import fs from "fs";
 import path2 from "path";
-import {execSync} from "child_process";
 var __dirname = "/media/benoti/Ubuntu-Disk/Github/ui-library/bin";
 var promptSchema = [
   {
@@ -6792,22 +6791,15 @@ function init_default() {
   import_prompt.default.message = safe.default.blue("Q");
   import_prompt.default.start();
   const blazeDefaultsDir = path2.resolve(__dirname, "../blaze");
-  console.log("blazeDefaultsDir", blazeDefaultsDir);
   import_prompt.default.get(promptSchema, function(err, result) {
-    console.log(result);
     if (err) {
       console.log(err.message);
       process.exit();
     }
     try {
-      const installBlazeLatestCmd = `npm i npm install https://github.com/BenjaminToby/blaze-ui.git@latest`;
       const dirInput = String(result["root-directory"]);
       const rootDir = path2.resolve(process.cwd(), dirInput);
       const blazeDir = path2.join(rootDir, "blaze");
-      execSync(installBlazeLatestCmd, {
-        stdio: "inherit",
-        cwd: blazeDir
-      });
       if (!fs.existsSync(blazeDir)) {
         fs.mkdirSync(blazeDir, { recursive: true });
         fs.cpSync(blazeDefaultsDir, blazeDir, {

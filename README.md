@@ -5,5 +5,5 @@ A react component library done right
 # installation
 
 ```shell
-npm install https://github.com/BenjaminToby/blaze-ui.git@latest
+npm install https://github.com/BenjaminToby/blaze-ui.git#latest
 ```

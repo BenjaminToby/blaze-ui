@@ -20,28 +20,17 @@ export default function () {
 
     const blazeDefaultsDir = path.resolve(__dirname, "../blaze");
 
-    console.log("blazeDefaultsDir", blazeDefaultsDir);
-
     prompt.get(promptSchema, function (err, result) {
-        console.log(result);
-
         if (err) {
             console.log(err.message);
             process.exit();
         }
 
         try {
-            const installBlazeLatestCmd = `npm i npm install https://github.com/BenjaminToby/blaze-ui.git@latest`;
-
             const dirInput = String(result["root-directory"]);
             const rootDir = path.resolve(process.cwd(), dirInput);
 
             const blazeDir = path.join(rootDir, "blaze");
-
-            execSync(installBlazeLatestCmd, {
-                stdio: "inherit",
-                cwd: blazeDir,
-            });
 
             if (!fs.existsSync(blazeDir)) {
                 fs.mkdirSync(blazeDir, { recursive: true });
