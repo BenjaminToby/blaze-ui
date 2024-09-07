@@ -5,3 +5,10 @@ node_modules
 .git
 /shell
 /dump
+/types
+/utils
+/pages
+/layouts
+/components
+/deploy
+/build
