@@ -35,9 +35,27 @@ After installing the module follow these steps to setup your theme:
 
 ## Usage
 
+### Use Components
+
+You can use blaze components like so:
+
+```javascript
+import { Button, Row } from "blaze-ui";
+
+export default function Home() {
+    return (
+        <Row>
+            <Button>Button</Button>
+            <Button color="secondary">Button Secondary</Button>
+            <Button color="accent">Button Accent</Button>
+        </Row>
+    );
+}
+```
+
 ### Customize theme
 
-To customize your theme simply customize the `blaze/theme/theme.css` file
+To customize your theme simply edit the `blaze/theme/theme.css` file
 
 ```css
 :root {
