@@ -5,7 +5,7 @@ A react component library done right
 ## Installation
 
 ```shell
-npm install https://github.com/BenjaminToby/blaze-ui.git#latest
+npm install https://github.com/Module-Trace/blaze-ui.git#latest
 ```
 
 ## Setup
