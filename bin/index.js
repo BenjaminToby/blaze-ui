@@ -9363,8 +9363,8 @@ function generateCSS({
 }
 function palleteGenerator() {
   try {
-    const colorCSSPath = path3.resolve(process.cwd(), "./blaze/styles/color.css");
-    const colorJSON = fs2.readFileSync(path3.resolve(process.cwd(), "./blaze/theme/color.json"), "utf8");
+    const colorCSSPath = path3.resolve(process.cwd(), "./blaze/color.css");
+    const colorJSON = fs2.readFileSync(path3.resolve(process.cwd(), "./blaze/color.json"), "utf8");
     const colorObj = JSON.parse(colorJSON);
     if (!colorObj.main) {
       console.log("Please enter a valid base color");

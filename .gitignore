@@ -9,7 +9,5 @@ node_modules
 /utils
 /pages
 /layouts
-/components
 /deploy
-/build
 /styles/less

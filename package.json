@@ -1,7 +1,7 @@
 {
     "name": "blaze-ui",
     "version": "1.0.0",
-    "main": "dist/react/components/index.js",
+    "main": "dist/components/index.js",
     "type": "module",
     "bin": {
         "blaze": "bin/index.js"
@@ -9,7 +9,8 @@
     "scripts": {
         "dev": "batchrun",
         "tailwind": "npx tailwindcss -i ./styles/root.css -o ./styles/tailwind.css --watch",
-        "build": "./build/build.sh"
+        "build": "./build/build.sh",
+        "git:push": "./build/git.sh"
     },
     "keywords": [],
     "author": "",
