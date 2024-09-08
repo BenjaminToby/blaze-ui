@@ -38,35 +38,35 @@ export default function (props: Props) {
 
         case "h3":
             return (
-                <h3 {...props} className={classNameFinal}>
+                <h3 {...finalProps} className={classNameFinal}>
                     {props.children}
                 </h3>
             );
 
         case "h4":
             return (
-                <h4 {...props} className={classNameFinal}>
+                <h4 {...finalProps} className={classNameFinal}>
                     {props.children}
                 </h4>
             );
 
         case "h5":
             return (
-                <h5 {...props} className={classNameFinal}>
+                <h5 {...finalProps} className={classNameFinal}>
                     {props.children}
                 </h5>
             );
 
         case "h6":
             return (
-                <h6 {...props} className={classNameFinal}>
+                <h6 {...finalProps} className={classNameFinal}>
                     {props.children}
                 </h6>
             );
 
         default:
             return (
-                <h1 {...props} className={classNameFinal}>
+                <h1 {...finalProps} className={classNameFinal}>
                     {props.children}
                 </h1>
             );
