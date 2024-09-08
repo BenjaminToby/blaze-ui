@@ -2,8 +2,7 @@ import { CSSProperties, DetailedHTMLProps, HTMLAttributes } from "react";
 import { DefaultAttributes } from "@/types";
 import grabFinalProps from "@/utils/grabFinalProps";
 import grabClassNames from "@/utils/grabClassNames";
-import { generateStyle } from "./stack";
-
+import generateStyle from "@/utils/generateStyles";
 export default function (
     props: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> &
         DefaultAttributes & {

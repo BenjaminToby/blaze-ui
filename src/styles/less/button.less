@@ -17,6 +17,12 @@ button,
         background-color: transparent;
         color: var(--main-color-600);
 
+        &:hover {
+            background-color: transparent;
+            color: var(--main-color-700);
+            border-color: $color;
+        }
+
         &.sec,
         &.secondary {
             background-color: transparent;
@@ -58,12 +64,7 @@ button,
 
     &:hover {
         background-color: var(--main-color-700);
-
-        &.outlined {
-            background-color: transparent;
-            color: var(--main-color-700);
-            border-color: var(--main-color-700);
-        }
+        border-color: $background-color;
     }
 
     &.sec,
@@ -109,6 +110,65 @@ button,
         &:hover {
             background-color: var(--accent-color-700);
             border-color: $background-color;
+        }
+    }
+}
+
+html.dark button,
+html.dark .button {
+    &.light {
+        background-color: var(--gray-color-800);
+        border-color: $background-color;
+        color: var(--gray-color-300);
+
+        &:hover {
+            background-color: var(--gray-color-700);
+        }
+    }
+
+    &.outlined {
+        background-color: transparent;
+        color: var(--main-color-400);
+        border-color: var(--main-color-600);
+
+        &:hover {
+            color: var(--main-color-200);
+            border-color: var(--main-color-500);
+        }
+
+        &.sec,
+        &.secondary {
+            background-color: transparent;
+            color: var(--sec-color-400);
+            border-color: var(--sec-color-600);
+
+            &:hover {
+                color: var(--sec-color-200);
+                border-color: var(--sec-color-500);
+            }
+        }
+
+        &.gray,
+        &.grey {
+            background-color: transparent;
+            color: var(--gray-color-300);
+            border-color: var(--gray-color-500);
+
+            &:hover {
+                color: var(--gray-color-100);
+                border-color: var(--gray-color-200);
+            }
+        }
+
+        &.light {
+            color: var(--gray-color-400);
+            border-color: var(--gray-color-800);
+            background-color: transparent;
+
+            &:hover {
+                color: var(--gray-color-200);
+                border-color: var(--gray-color-600);
+            }
         }
     }
 }

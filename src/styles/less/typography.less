@@ -6,9 +6,168 @@ h5,
 h6 {
     margin: 0;
     margin-bottom: var(--heading-margin);
+    font-family: var(--heading-font);
+    line-height: var(--heading-line-height);
+    color: var(--heading-color);
 
     &.no-margin {
         margin: 0;
         margin-bottom: 0;
     }
+}
+
+h1 {
+    font-size: var(--h1-size);
+
+    @media @media_xl {
+        font-size: var(--h1-xl-size);
+    }
+
+    @media @media_md {
+        font-size: var(--h1-md-size);
+    }
+
+    @media @media_sm {
+        font-size: var(--h1-sm-size);
+    }
+}
+
+h2 {
+    font-size: var(--h2-size);
+
+    @media @media_xl {
+        font-size: var(--h2-xl-size);
+    }
+
+    @media @media_md {
+        font-size: var(--h2-md-size);
+    }
+
+    @media @media_sm {
+        font-size: var(--h2-sm-size);
+    }
+}
+
+h3 {
+    font-size: var(--h3-size);
+
+    @media @media_xl {
+        font-size: var(--h3-xl-size);
+    }
+
+    @media @media_md {
+        font-size: var(--h3-md-size);
+    }
+
+    @media @media_sm {
+        font-size: var(--h3-sm-size);
+    }
+}
+
+h4 {
+    font-size: var(--h4-size);
+
+    @media @media_xl {
+        font-size: var(--h4-xl-size);
+    }
+
+    @media @media_md {
+        font-size: var(--h4-md-size);
+    }
+
+    @media @media_sm {
+        font-size: var(--h4-sm-size);
+    }
+}
+
+h5 {
+    font-size: var(--h5-size);
+
+    @media @media_xl {
+        font-size: var(--h5-xl-size);
+    }
+
+    @media @media_md {
+        font-size: var(--h5-md-size);
+    }
+
+    @media @media_sm {
+        font-size: var(--h5-sm-size);
+    }
+}
+
+h6 {
+    font-size: var(--h6-size);
+
+    @media @media_xl {
+        font-size: var(--h6-xl-size);
+    }
+
+    @media @media_md {
+        font-size: var(--h6-md-size);
+    }
+
+    @media @media_sm {
+        font-size: var(--h6-sm-size);
+    }
+}
+
+html.dark {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: white;
+    }
+}
+
+p,
+span,
+a:not(.button) {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+
+    &.xs {
+        font-size: var(--font-size-xs);
+    }
+    &.sm {
+        font-size: var(--font-size-sm);
+    }
+    &.base {
+        font-size: var(--font-size);
+    }
+    &.md {
+        font-size: var(--font-size-md);
+    }
+    &.lg {
+        font-size: var(--font-size-lg);
+    }
+    &.xl {
+        font-size: var(--font-size-xl);
+    }
+
+    &.italic {
+        font-style: italic;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+}
+
+.quote-block {
+    background-color: var(--gray-color-50);
+    padding: 10px 20px;
+    border-left: 4px solid var(--main-color-500);
+    border-radius: var(--radius);
+
+    span {
+        font-style: italic;
+    }
+}
+
+html.dark .quote-block {
+    background-color: var(--gray-color-800);
 }
