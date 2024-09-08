@@ -25,7 +25,7 @@ cd $root_dir
 
 rm -f $root_dir/dist/components/*.ts
 
-cp -R $root_dir/types/d.ts/components/* \
+cp -R $root_dir/types/d.ts/src/components/* \
     $root_dir/dist/components/
 
 git add .
