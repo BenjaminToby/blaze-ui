@@ -41,3 +41,24 @@ footer {
 hr {
     opacity: 0.2;
 }
+
+a:not(.button) {
+    text-decoration: none;
+    color: var(--main-color-600);
+    border-bottom: 1px solid var(--main-color-100);
+
+    &:hover {
+        border-bottom-color: var(--main-color-200);
+        color: var(--main-color-600);
+    }
+}
+
+html.dark a:not(.button) {
+    color: var(--main-color-400);
+    border-bottom: 1px solid var(--main-color-500);
+
+    &:hover {
+        color: var(--main-color-300);
+        border-bottom-color: var(--main-color-400);
+    }
+}

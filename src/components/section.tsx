@@ -1,6 +1,7 @@
 import { CSSProperties } from "react";
-import { generateStyle, StackProps } from "./stack";
+import { StackProps } from "./stack";
 import grabFinalProps from "@/utils/grabFinalProps";
+import generateStyle from "@/utils/generateStyles";
 
 type Props = StackProps;
 
