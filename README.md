@@ -24,9 +24,9 @@ After installing the module follow these steps to setup your theme:
 
     ```javascript
     import "@/blaze/color.css";
-    import "blaze-ui/styles/root.css";
+    import "blaze-ui/dist/styles/root.css";
     import "@/blaze/theme.css";
-    import "blaze-ui/styles/blaze.css";
+    import "blaze-ui/dist/styles/blaze.css";
     ```
 
     > NB: All other custom css files should come after this code block.
