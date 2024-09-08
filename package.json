@@ -1,7 +1,10 @@
 {
     "name": "blaze-ui",
     "version": "1.0.0",
-    "main": "dist/components/index.js",
+    "main": "dist/index.js",
+    "files": [
+        "dist/"
+    ],
     "type": "module",
     "bin": {
         "blaze": "bin/index.js"
